@@ -118,7 +118,7 @@ let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
-let g:NERDCreateDefaultMappings = 0
+let g:NERDCreateDefaultMappings = 1
 let g:NERDSpaceDelims = 1
 "emmet
 let g:user_emmet_mode='iv'
