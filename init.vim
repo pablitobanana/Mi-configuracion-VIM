@@ -118,7 +118,8 @@ let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
 let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
-
+let g:NERDCreateDefaultMappings = 0
+let g:NERDSpaceDelims = 1
 "emmet
 let g:user_emmet_mode='iv'
 let g:user_emmet_install_global = 0
@@ -166,15 +167,15 @@ nmap <leader>gr <Plug>(coc-references)
 xmap s <Plug>VSurround
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<cr>  
-
 map <Leader>f :Files<CR>
 map <Leader>ag :Ag<CR>
+
+
 
 nmap <Leader>w :w<CR>
 nmap <Leader>W :wq<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>qq :q!<CR>
-nmap <c-z> u
 inoremap <Esc> <Esc><Esc>
 
 nnoremap <Leader>> 10<C-w>> 	
