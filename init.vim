@@ -1,7 +1,6 @@
 set lazyredraw
 set tf
-set relativenumber
-set number
+set number rnu
 set mouse=a
 set numberwidth=5
 set clipboard=unnamed
@@ -13,10 +12,11 @@ set showmatch
 set noshowmode 
 set syntax=off
 set ignorecase
-set smartcase
+set smartindent
 set tabstop=2
 set sw=2
 "set expandtab
+set spr
 set laststatus=2 
 set smc=0
 
@@ -30,13 +30,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'  "te pone un mamalon y sensual tema
 
 "barra
-Plug 'maximbaz/lightline-ale' 
 Plug 'itchyny/lightline.vim'  "te pone mamalona la barra de abajo
-Plug 'shinchu/lightline-gruvbox.vim'
 
 "syntax
 Plug 'sheerun/vim-polyglot'   "resaltado de sintaxis
-"Plug 'norcalli/nvim-colorizer.lua' "muesta el color del numero hexadesimal
 Plug 'gko/vim-coloresque' "muestra el color del numero
 Plug 'luochen1990/rainbow' "parentesis de colores
 Plug 'tpope/vim-surround' "enbuelve lo que seleccionas con  modo Visual das a la S y selecionar el caracter 
@@ -91,7 +88,7 @@ let g:ycm_python_binary_path = 'python3' " esto no se que sea pero esta jalando 
 let g:indentLine_defaultGroup = 'SpecialKey'
 let g:indentLine_color_term = 117
 let g:indentLine_enabled = 1
-let g:indentLine_char_list = ['¦','⇣','∫','φ','‰','ψ','ƒ']
+let g:indentLine_char_list = ['¦','⇣','∫','φ','ψ']
 
 "tema
 let g:gruvbox_contrast_dark='hard' 
@@ -196,6 +193,4 @@ nnoremap <c-k> 10<C-y>M
 
 "abrir nueva pestaña para moverse entre ellas 'gt'
 nmap <C-t> :tabnew 
-
-
-
+nmap <leader><Right> :vsplit 
