@@ -1,26 +1,24 @@
+set lazyredraw
+set tf
+set relativenumber
 set number
 set mouse=a
-set numberwidth=1
+set numberwidth=5
 set clipboard=unnamed
 set showcmd
 set ruler
 set encoding=utf-8 
-set relativenumber
 set cursorline
 set showmatch
 set noshowmode 
-syntax off
+set syntax=off
 set ignorecase
 set smartcase
 set tabstop=2
 set sw=2
 "set expandtab
 set laststatus=2 
-set splitright
-set nocompatible
-set synmaxcol=128
-set ttyfast 
-set lazyredraw 
+set smc=0
 
 
 
