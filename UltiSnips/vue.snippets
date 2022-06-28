@@ -18,16 +18,40 @@ snippet transition
 <transition></transition>
 endsnippet
 
-snippet vue 
+snippet vue2
 <template>
-	<div id="">
-
+	<div id="${1:Name}">
+		
 	</div>
 </template>
 
 <script>
 export default{
-	${0}
+	name: '$1',
+	data(){
+		return{}
+	},	
+};
+</script>
+
+<style scoped>
+
+</style>
+endsnippet
+snippet vue 
+<template>
+	<div id="${1:Name}">
+		
+	</div>
+</template>
+
+<script>
+export default{
+	name: '$1',
+	setup(){
+		
+		return{}
+	},	
 };
 </script>
 
@@ -36,16 +60,13 @@ export default{
 </style>
 endsnippet
 
-snippet vimport:c
-	import ${1:Name} from './components/$1.vue';
-
-	export default {
-		components: {
-			$1
-		}
-	}
+snippet ivc
+import ${1:Name} from '@/components/$1.vue';
 endsnippet
 
+snippet iv 
+import { ${1:New} } from 'vue';
+endsnippet
 snippet vactions
 	actions: {
 		${1:updateValue}({commit}, ${2:payload}) {
@@ -131,9 +152,6 @@ snippet vgetters
 		}
 	}
 endsnippet
-snippet vi
-	import ${1:New} from './components/$1.vue';
-endsnippet
 snippet vkeep
 	<keep-alive>
 		<component :is="">
@@ -158,15 +176,10 @@ snippet vmutations
 		}
 	}
 endsnippet
-snippet vprops:d
+snippet vprops
 	${1:propName}: {
 	  type: ${2:Number},
 	  default: ${0}
-	},
-endsnippet
-snippet vprops
-	${1:propName}: {
-		type: ${2:Number}
 	},
 endsnippet
 snippet vstore

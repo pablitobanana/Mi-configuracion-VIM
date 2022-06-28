@@ -10,7 +10,7 @@ set encoding=utf-8
 set cursorline
 set showmatch
 set noshowmode 
-set syntax=off
+syntax on
 set ignorecase
 set smartindent
 set tabstop=2
@@ -19,7 +19,7 @@ set sw=2
 set spr
 set laststatus=2 
 set smc=0
-
+set nocompatible
 
 
 
@@ -33,7 +33,9 @@ Plug 'morhetz/gruvbox'  "te pone un mamalon y sensual tema
 Plug 'itchyny/lightline.vim'  "te pone mamalona la barra de abajo
 
 "syntax
-Plug 'sheerun/vim-polyglot'   "resaltado de sintaxis
+"Plug 'sheerun/vim-polyglot'  "resaltado de sintaxis
+"Plug 'posva/vim-vue'
+Plug 'storyn26383/vim-vue'
 Plug 'gko/vim-coloresque' "muestra el color del numero
 Plug 'luochen1990/rainbow' "parentesis de colores
 Plug 'tpope/vim-surround' "enbuelve lo que seleccionas con  modo Visual das a la S y selecionar el caracter 
@@ -53,9 +55,7 @@ Plug 'junegunn/fzf.vim' "asi al chile no se que hacer carnal
 Plug 'easymotion/vim-easymotion'   "permite navegar facil com convinacion de teclas
 Plug 'mhinz/vim-signify'          " te avisa que se quita o que se agrega
 Plug 'scrooloose/nerdtree'         "te genera un arbol de archivos
-Plug 'Yggdroot/indentLine'    " te genera un identado
 Plug 'christoomey/vim-tmux-navigator'  "te permite navegar entre las ventanas
-"Plug 'turbio/bracey.vim' "live server
 Plug 'scrooloose/nerdcommenter'  "genera comentarios 
 Plug 'mattn/emmet-vim'
 
@@ -69,7 +69,7 @@ let mapleader = " "
 autocmd VimEnter * highlight Normal ctermbg=16 ctermfg=231
 "ctermfg = 33
 autocmd VimEnter * highlight Comment ctermfg=240
-autocmd VimEnter * highlight CursorLine ctermbg=232  
+autocmd VimEnter * highlight CursorLine ctermbg=233  
 autocmd VimEnter * highlight Number ctermfg=231 
 autocmd VimEnter * highlight jsObjectProp ctermfg=150 
 autocmd VimEnter * highlight Float ctermfg=231  
@@ -88,7 +88,7 @@ let g:ycm_python_binary_path = 'python3' " esto no se que sea pero esta jalando 
 let g:indentLine_defaultGroup = 'SpecialKey'
 let g:indentLine_color_term = 117
 let g:indentLine_enabled = 1
-let g:indentLine_char_list = ['¦','⇣','∫','φ','ψ']
+let g:indentLine_char_list = ['¦','|']
 
 "tema
 let g:gruvbox_contrast_dark='hard' 
@@ -100,7 +100,7 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let NERDTreeShowLineNumbers=1
-let NERDTreeMapOpenInTab='\t'
+let NERDTreeMapOpenInTab='t'
 
 "snippets
 let g:UltiSnipsSnippetDirectories=[$HOME.'/AppData/Local/nvim/UltiSnips'] "le decimos donde estan los ultisnips
@@ -127,7 +127,7 @@ let g:tmux_navigator_disable_when_zoomed = 1
 let g:tmux_navigator_preserve_zoom = 1
 
 "closetag
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx,*.js' "autocompletado de tags 
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx,*.js, *.vue' "autocompletado de tags 
 
 "colores en los colores
 let g:ColorizerAttachToBuffer = 1
@@ -163,7 +163,10 @@ xmap s <Plug>VSurround
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>nt :NERDTreeFind<cr>  
 map <Leader>f :Files<CR>
-map <Leader>ag :Ag<CR>
+"map <Leader>ag :Ag<CR>
+nmap <leader>pr <Plug>(coc-format)
+nmap <leader>pf <Plug>(coc-format-selected)
+vmap <leader>pf <Plug>(coc-format-selected)
 
 
 
@@ -179,6 +182,8 @@ nnoremap <Leader>< 10<C-w><
 nnoremap <Leader>; $a;<Esc>	
 nnoremap <Leader>, $a,<Esc>	
 nnoremap <leader>{ A{}<esc>i 
+nnoremap <leader>} a``<esc>i 
+nmap <leader>/ :nohlsearch<CR>
 
 "tmux navegator
 nnoremap <silent> <Leader><C-h> :TmuxNavigateLeft<cr>
@@ -194,3 +199,4 @@ nnoremap <c-k> 10<C-y>M
 "abrir nueva pestaña para moverse entre ellas 'gt'
 nmap <C-t> :tabnew 
 nmap <leader><Right> :vsplit 
+nmap <C-z> u

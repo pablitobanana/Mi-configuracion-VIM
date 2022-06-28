@@ -1,0 +1,126 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.043  000.043: --- NVIM STARTING ---
+051.946  051.903: locale set
+053.508  001.562: inits 1
+053.873  000.365: window checked
+054.296  000.423: parsing arguments
+054.456  000.160: expanding arguments
+054.560  000.104: inits 2
+057.715  003.154: init highlight
+057.721  000.006: waiting for UI
+066.573  008.852: done waiting for UI
+066.618  000.045: init screen for UI
+076.785  004.338  004.338: sourcing C:\Users\Axel Silva\AppData\Local\nvim-data\site\autoload\plug.vim
+138.823  000.185  000.185: sourcing C:\Users\Axel Silva\.vim\plugged\vim-polyglot\filetype.vim
+159.650  000.199  000.199: sourcing C:\Users\Axel Silva\.vim\plugged\vim-polyglot\ftdetect\polyglot.vim
+161.599  000.226  000.226: sourcing C:\Users\Axel Silva\.vim\plugged\ultisnips\ftdetect\snippets.vim
+172.536  030.278  029.853: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\filetype.vim
+177.436  000.201  000.201: sourcing C:\Users\Axel Silva\.vim\plugged\vim-polyglot\ftdetect\polyglot.vim
+179.532  000.213  000.213: sourcing C:\Users\Axel Silva\.vim\plugged\ultisnips\ftdetect\snippets.vim
+232.813  096.146  065.269: sourcing C:\Users\Axel Silva\.vim\plugged\vim-polyglot\autoload\polyglot\init.vim
+232.863  097.538  001.392: sourcing C:\Users\Axel Silva\.vim\plugged\vim-polyglot\filetype.vim
+236.977  000.206  000.206: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\filetype.vim
+243.710  000.253  000.253: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\ftplugin.vim
+250.543  000.372  000.372: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\indent.vim
+262.238  000.943  000.943: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\syntax\syncolor.vim
+264.916  006.753  005.811: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\syntax\synload.vim
+265.152  010.183  003.429: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\syntax\syntax.vim
+273.343  000.861  000.861: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\syntax\syncolor.vim
+279.886  000.534  000.534: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\syntax\syncolor.vim
+294.465  028.156  026.762: sourcing C:\Users\Axel Silva\.vim\plugged\gruvbox\colors\gruvbox.vim
+298.661  000.357  000.357: sourcing C:\Users\Axel Silva\.vim\plugged\vim-polyglot\filetype.vim
+300.356  000.273  000.273: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\filetype.vim
+309.163  000.190  000.190: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\ftplugin.vim
+312.995  000.264  000.264: sourcing C:\Users\Axel Silva/AppData/Local/nvim/rainbow.vim
+314.998  001.246  001.246: sourcing C:\Users\Axel Silva/AppData/Local/nvim/coc.vim
+315.293  244.097  100.722: sourcing C:\Users\Axel Silva\AppData\Local\nvim\init.vim
+315.312  004.597: sourcing vimrc file(s)
+320.305  000.463  000.463: sourcing C:\Users\Axel Silva\.vim\plugged\lightline.vim\plugin\lightline.vim
+322.954  000.280  000.280: sourcing C:\Users\Axel Silva\.vim\plugged\rainbow\plugin\rainbow_main.vim
+326.099  001.117  001.117: sourcing C:\Users\Axel Silva\.vim\plugged\vim-surround\plugin\surround.vim
+330.287  000.347  000.347: sourcing C:\Users\Axel Silva\.vim\plugged\ultisnips\autoload\UltiSnips\map_keys.vim
+330.499  002.511  002.164: sourcing C:\Users\Axel Silva\.vim\plugged\ultisnips\plugin\UltiSnips.vim
+332.709  000.236  000.236: sourcing C:\Users\Axel Silva\.vim\plugged\vim-snippets\plugin\vimsnippets.vim
+338.368  000.626  000.626: sourcing C:\Users\Axel Silva\.vim\plugged\coc.nvim\autoload\coc\rpc.vim
+342.043  001.454  001.454: sourcing C:\Users\Axel Silva\.vim\plugged\coc.nvim\autoload\coc\util.vim
+388.350  000.599  000.599: sourcing C:\Users\Axel Silva\.vim\plugged\coc.nvim\autoload\coc\client.vim
+450.285  115.291  112.613: sourcing C:\Users\Axel Silva\.vim\plugged\coc.nvim\plugin\coc.vim
+455.282  002.013  002.013: sourcing C:\Users\Axel Silva\.vim\plugged\auto-pairs\plugin\auto-pairs.vim
+458.874  000.935  000.935: sourcing C:\Users\Axel Silva\.vim\plugged\vim-closetag\plugin\closetag.vim
+463.021  001.595  001.595: sourcing C:\Users\Axel Silva\.vim\plugged\fzf\plugin\fzf.vim
+470.496  004.884  004.884: sourcing C:\Users\Axel Silva\.vim\plugged\fzf.vim\plugin\fzf.vim
+491.201  017.892  017.892: sourcing C:\Users\Axel Silva\.vim\plugged\vim-easymotion\plugin\EasyMotion.vim
+495.253  001.044  001.044: sourcing C:\Users\Axel Silva\.vim\plugged\vim-signify\plugin\signify.vim
+503.803  001.272  001.272: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\autoload\nerdtree.vim
+507.644  001.016  001.016: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\lib\nerdtree\path.vim
+510.524  000.425  000.425: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\lib\nerdtree\menu_controller.vim
+513.249  000.345  000.345: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\lib\nerdtree\menu_item.vim
+515.990  000.388  000.388: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\lib\nerdtree\key_map.vim
+519.015  000.591  000.591: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\lib\nerdtree\bookmark.vim
+522.117  000.568  000.568: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\lib\nerdtree\tree_file_node.vim
+525.474  000.915  000.915: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\lib\nerdtree\tree_dir_node.vim
+528.477  000.546  000.546: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\lib\nerdtree\opener.vim
+531.579  000.626  000.626: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\lib\nerdtree\creator.vim
+534.640  000.320  000.320: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\lib\nerdtree\flag_set.vim
+537.517  000.467  000.467: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\lib\nerdtree\nerdtree.vim
+540.844  000.880  000.880: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\lib\nerdtree\ui.vim
+543.584  000.254  000.254: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\lib\nerdtree\event.vim
+546.208  000.290  000.290: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\lib\nerdtree\notifier.vim
+550.911  002.294  002.294: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\autoload\nerdtree\ui_glue.vim
+574.206  000.643  000.643: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\nerdtree_plugin\exec_menuitem.vim
+957.410  284.312  284.312: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\autoload\provider\clipboard.vim
+959.248  384.106  099.794: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\nerdtree_plugin\fs_menu.vim
+960.791  000.609  000.609: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\nerdtree_plugin\vcs.vim
+968.703  470.507  073.953: sourcing C:\Users\Axel Silva\.vim\plugged\nerdtree\plugin\NERD_tree.vim
+971.955  000.384  000.384: sourcing C:\Users\Axel Silva\.vim\plugged\vim-tmux-navigator\plugin\tmux_navigator.vim
+979.349  005.408  005.408: sourcing C:\Users\Axel Silva\.vim\plugged\nerdcommenter\plugin\nerdcommenter.vim
+982.043  000.699  000.699: sourcing C:\Users\Axel Silva\.vim\plugged\emmet-vim\plugin\emmet.vim
+998.520  013.746  013.746: sourcing C:\Users\Axel Silva\.vim\plugged\vim-polyglot\plugin\polyglot.vim
+1013.699  001.382  001.382: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\plugin\gzip.vim
+1015.051  000.327  000.327: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\plugin\health.vim
+1016.557  000.584  000.584: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\plugin\man.vim
+1037.210  001.733  001.733: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\pack\dist\opt\matchit\plugin\matchit.vim
+1039.625  022.084  020.351: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\plugin\matchit.vim
+1041.672  001.095  001.095: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\plugin\matchparen.vim
+1045.079  002.482  002.482: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\plugin\netrwPlugin.vim
+1049.291  000.318  000.318: sourcing C:\Users\Axel Silva\AppData\Local\nvim-data/rplugin.vim
+1049.350  003.224  002.906: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\plugin\rplugin.vim
+1050.977  000.676  000.676: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\plugin\shada.vim
+1052.339  000.361  000.361: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\plugin\spellfile.vim
+1054.179  000.886  000.886: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\plugin\tarPlugin.vim
+1056.013  000.729  000.729: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\plugin\tohtml.vim
+1057.369  000.382  000.382: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\plugin\tutor.vim
+1059.246  000.927  000.927: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\plugin\zipPlugin.vim
+1088.504  099.047: loading plugins
+1091.335  002.830: loading packages
+1094.523  000.479  000.479: sourcing C:\Users\Axel Silva\.vim\plugged\ultisnips\after\plugin\UltiSnips_after.vim
+1099.695  002.401  002.401: sourcing C:\Users\Axel Silva\.vim\plugged\indentLine\after\plugin\indentLine.vim
+1105.182  010.967: loading after plugins
+1105.306  000.123: inits 3
+1117.859  012.553: reading ShaDa
+1146.058  001.229  001.229: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\scripts.vim
+1165.889  000.683  000.683: sourcing C:\Users\Axel Silva\.vim\plugged\vim-polyglot\ftplugin\text.vim
+1190.740  000.345  000.345: sourcing C:\tools\neovim\Neovim\share\nvim\runtime\ftplugin\text.vim
+1247.265  000.869  000.869: sourcing C:\Users\Axel Silva\.vim\plugged\rainbow\autoload\rainbow_main.vim
+1249.411  000.393  000.393: sourcing C:\Users\Axel Silva\.vim\plugged\rainbow\autoload\rainbow.vim
+1260.342  000.450  000.450: sourcing C:\Users\Axel Silva\.vim\plugged\vim-signify\autoload\sy.vim
+1262.695  140.867: opening buffers
+1283.086  016.404  016.404: sourcing C:\Users\Axel Silva\.vim\plugged\vim-polyglot\autoload\polyglot\sleuth.vim
+1288.207  001.242  001.242: sourcing C:\Users\Axel Silva\.vim\plugged\lightline.vim\autoload\lightline.vim
+1290.992  000.289  000.289: sourcing C:\Users\Axel Silva\.vim\plugged\lightline.vim\autoload\lightline\tab.vim
+1295.733  000.657  000.657: sourcing C:\Users\Axel Silva\.vim\plugged\lightline.vim\autoload\lightline\colorscheme.vim
+1298.984  005.345  004.688: sourcing C:\Users\Axel Silva\.vim\plugged\lightline.vim\autoload\lightline\colorscheme\powerline.vim
+1299.024  006.751  001.405: sourcing C:\Users\Axel Silva\.vim\plugged\lightline.vim\autoload\lightline\colorscheme\default.vim
+1306.778  019.397: BufEnter autocommands
+1306.790  000.012: editing files in windows
+1310.462  003.672: VimEnter autocommands
+1310.479  000.017: UIEnter autocommands
+1310.493  000.014: before starting main loop
+1315.322  002.797  002.797: sourcing C:\Users\Axel Silva\.vim\plugged\coc.nvim\autoload\coc\float.vim
+1316.863  003.572: first screen update
+1316.882  000.019: --- NVIM STARTED ---
