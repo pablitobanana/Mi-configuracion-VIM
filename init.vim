@@ -1,3 +1,7 @@
+" set termguicolors
+" set wildmenu
+" set noswapfile
+filetype on 
 set lazyredraw
 set tf
 set number rnu
@@ -11,18 +15,29 @@ set cursorline
 set showmatch
 set noshowmode 
 syntax on
+syntax enable
 set ignorecase
 set smartindent
 set tabstop=2
 set sw=2
-"set expandtab
+set softtabstop=2
+set expandtab
+set autoindent
 set spr
 set laststatus=2 
 set smc=0
 set nocompatible
+" au BufNewFile,BufRead *.html set filetype=htmldjango
+" au BufNewFile,BufRead *.py
+"      set tabstop=2
+"      set softtabstop=2
+"      set shiftwidth=2
+"      set textwidth=79
+"      set expandtab
+"      set autoindent
+"      set fileformat=unix
 
-
-
+"let g:polyglot_disabled = ['javascript']
 "------------------------------------------------Plugs---------------------------------------
 call plug#begin('~/.vim/plugged')
 
@@ -33,21 +48,21 @@ Plug 'morhetz/gruvbox'  "te pone un mamalon y sensual tema
 Plug 'itchyny/lightline.vim'  "te pone mamalona la barra de abajo
 
 "syntax
-"Plug 'sheerun/vim-polyglot'  "resaltado de sintaxis
-"Plug 'posva/vim-vue'
-Plug 'storyn26383/vim-vue'
+Plug 'posva/vim-vue' "resaltado para vue
+Plug 'sheerun/vim-polyglot'  "resaltado de sintaxis
 Plug 'gko/vim-coloresque' "muestra el color del numero
 Plug 'luochen1990/rainbow' "parentesis de colores
 Plug 'tpope/vim-surround' "enbuelve lo que seleccionas con  modo Visual das a la S y selecionar el caracter 
 
 
 "autocompletado
-Plug 'sirver/ultisnips' "te pone snippets que tienes en la carpeta ultisnips
+Plug 'SirVer/ultisnips' "te pone snippets que tienes en la carpeta ultisnips
 Plug 'honza/vim-snippets' "creas tus propios snippets 
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocompletado
 Plug 'jiangmiao/auto-pairs' "autocompletado de llaves
 Plug 'alvan/vim-closetag'		"autocomletado de etiquetas
 Plug 'voronkovich/ultisnips-vue' "vue-snippets
+Plug 'mattn/emmet-vim' "parte de autocompletado
 
 "IDE
 Plug 'junegunn/fzf'
@@ -57,7 +72,17 @@ Plug 'mhinz/vim-signify'          " te avisa que se quita o que se agrega
 Plug 'scrooloose/nerdtree'         "te genera un arbol de archivos
 Plug 'christoomey/vim-tmux-navigator'  "te permite navegar entre las ventanas
 Plug 'scrooloose/nerdcommenter'  "genera comentarios 
-Plug 'mattn/emmet-vim'
+Plug 'Yggdroot/indentLine' "linea de marcado de identado
+Plug 'vim-scripts/pylint.vim' " plug python
+Plug 'vim-python/python-syntax'
+" Plug 'davidhalter/jedi-vim'
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
+Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'dinhhuy258/vim-database', {'branch': 'master', 'do': ':UpdateRemotePlugins'}
+Plug 'cwood/vim-django'
+Plug 'tweekmonster/django-plus.vim'
+
+
 
 call plug#end() 
 
@@ -76,9 +101,10 @@ autocmd VimEnter * highlight Float ctermfg=231
 autocmd VimEnter * highlight Operator ctermfg=160
 autocmd VimEnter * highlight Noise ctermfg=31
 autocmd VimEnter * highlight jsDot ctermfg=255
-
+autocmd VimEnter * syntax sync fromstart
 
 "configuracion de python
+let g:python3_host_prog = 'C:\Users\Axel Silva\AppData\Local\Programs\Python\Python311\python.exe' "le decimos donde se encuentra python311
 let g:python3_host_prog = 'C:\Users\Axel Silva\AppData\Local\Programs\Python\Python37\python.exe' "le decimos donde se encuentra python37
 let g:python_host_prog = 'C:/python27/python.exe' "ruta de donde se encuentra python27
 let g:UltiSnipsUsePythonVersion = 3  "le decimos que version va a utilizar
@@ -94,7 +120,15 @@ let g:indentLine_char_list = ['¦','|']
 let g:gruvbox_contrast_dark='hard' 
 colorscheme gruvbox
 
- 
+"Kite
+" let g:kite_supported_languages = ['python','javascript']
+
+"coc
+" autocmd FileType python let b:coc_suggest_disable=1
+" autocmd FileType javascript let b:coc_suggest_disable=1
+"let g:jedi#use_tabs_not_buffers = 1
+
+
 "NerdTree
 let NERDTreeQuitOnOpen=1
 let NERDTreeMinimalUI=1
@@ -115,11 +149,12 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 let g:NERDCreateDefaultMappings = 1
 let g:NERDSpaceDelims = 1
+
 "emmet
 let g:user_emmet_mode='iv'
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
-let g:user_emmet_leader_key=';'
+"let g:user_emmet_install_global = 0
+"autocmd FileType html,css EmmetInstall
+let g:user_emmet_leader_key='<CR>'
 
 
 " tmux navigator
@@ -147,10 +182,10 @@ command! -bang -nargs=? -complete=dir Files
 
 
 source $HOME/AppData/Local/nvim/rainbow.vim "configuracion de los parentesis de colores
-source $HOME/AppData/Local/nvim/coc.vim  "configuracion de coc
+source $HOME/AppData/Local/nvim/coc2.vim  "configuracion de coc
 "source $HOME/AppData/Local/nvim/funciones.vim "configuracion de funciones 
 
-
+let g:jedi#environment_path = "C:\Users\Axel Silva\AppData\Local\Programs\Python\Python310"
 
 "-------------------------------------configuraciones de teclas-------------------
 
@@ -184,6 +219,9 @@ nnoremap <Leader>, $a,<Esc>
 nnoremap <leader>{ A{}<esc>i 
 nnoremap <leader>} a``<esc>i 
 nmap <leader>/ :nohlsearch<CR>
+nmap <leader>. A:<Esc>
+nmap <leader>rw :%s/resplasar/por/g
+
 
 "tmux navegator
 nnoremap <silent> <Leader><C-h> :TmuxNavigateLeft<cr>
@@ -200,3 +238,4 @@ nnoremap <c-k> 10<C-y>M
 nmap <C-t> :tabnew 
 nmap <leader><Right> :vsplit 
 nmap <C-z> u
+nmap <f1> <ESC>

@@ -7,6 +7,8 @@ const tuMama = async ()=>{
 	await fetch(input);
 }
 
+
+
 for (let i = 0, len = Things.length; i < len; i++) {
 	
 }

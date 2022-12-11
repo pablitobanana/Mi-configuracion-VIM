@@ -38,6 +38,23 @@ export default{
 
 </style>
 endsnippet
+
+snippet vues 
+<script setup>
+
+</script>
+
+<template>
+	<div id="${1:Name}">
+		
+	</div>
+</template>
+
+<style scoped>
+
+</style>
+endsnippet
+
 snippet vue 
 <template>
 	<div id="${1:Name}">
@@ -60,13 +77,30 @@ export default{
 </style>
 endsnippet
 
+snippet iv
+import { ${1:New} } from 'vue';
+endsnippet
+
 snippet ivc
 import ${1:Name} from '@/components/$1.vue';
 endsnippet
 
-snippet iv 
-import { ${1:New} } from 'vue';
+snippet ivs
+import { ${1:Name} } from '@/stores/';
 endsnippet
+
+snippet ivx
+import { ${1:Name} }from 'vuex';
+endsnippet
+
+snippet ivp
+import { ${1:New} } from 'pinia';
+endsnippet
+
+snippet ivr
+import { ${1:New} } from 'vue-router';
+endsnippet
+
 snippet vactions
 	actions: {
 		${1:updateValue}({commit}, ${2:payload}) {
