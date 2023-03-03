@@ -46,6 +46,7 @@ Plug 'morhetz/gruvbox'  "te pone un mamalon y sensual tema
 
 "barra
 Plug 'itchyny/lightline.vim'  "te pone mamalona la barra de abajo
+Plug 'itchyny/vim-gitbranch' "agrega la rama en la que se esta tabajando
 
 "syntax
 Plug 'posva/vim-vue' "resaltado para vue
@@ -59,10 +60,9 @@ Plug 'tpope/vim-surround' "enbuelve lo que seleccionas con  modo Visual das a la
 Plug 'SirVer/ultisnips' "te pone snippets que tienes en la carpeta ultisnips
 Plug 'honza/vim-snippets' "creas tus propios snippets 
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocompletado
-Plug 'jiangmiao/auto-pairs' "autocompletado de llaves
+Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'		"autocomletado de etiquetas
 Plug 'voronkovich/ultisnips-vue' "vue-snippets
-Plug 'mattn/emmet-vim' "parte de autocompletado
 
 "IDE
 Plug 'junegunn/fzf'
@@ -75,7 +75,6 @@ Plug 'scrooloose/nerdcommenter'  "genera comentarios
 Plug 'Yggdroot/indentLine' "linea de marcado de identado
 Plug 'vim-scripts/pylint.vim' " plug python
 Plug 'vim-python/python-syntax'
-" Plug 'davidhalter/jedi-vim'
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
 Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'dinhhuy258/vim-database', {'branch': 'master', 'do': ':UpdateRemotePlugins'}
@@ -119,6 +118,17 @@ let g:indentLine_char_list = ['¦','|']
 "tema
 let g:gruvbox_contrast_dark='hard' 
 colorscheme gruvbox
+"barra 
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified'] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'gitbranch#name'
+      \ },
+      \ }
 
 "Kite
 " let g:kite_supported_languages = ['python','javascript']
@@ -149,12 +159,6 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 let g:NERDCreateDefaultMappings = 1
 let g:NERDSpaceDelims = 1
-
-"emmet
-let g:user_emmet_mode='iv'
-"let g:user_emmet_install_global = 0
-"autocmd FileType html,css EmmetInstall
-let g:user_emmet_leader_key='<CR>'
 
 
 " tmux navigator
@@ -207,6 +211,7 @@ vmap <leader>pf <Plug>(coc-format-selected)
 
 nmap <Leader>w :w<CR>
 nmap <Leader>W :wq<CR>
+nmap <Leader>Wq :wqa<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>qq :q!<CR>
 inoremap <Esc> <Esc><Esc>
@@ -214,12 +219,13 @@ inoremap <Esc> <Esc><Esc>
 nnoremap <Leader>> 10<C-w>> 	
 nnoremap <Leader>< 10<C-w><
 
-nnoremap <Leader>; $a;<Esc>	
-nnoremap <Leader>, $a,<Esc>	
+nnoremap <Leader>; A;<Esc>	
+nnoremap <Leader>, A,<cr>
 nnoremap <leader>{ A{}<esc>i 
 nnoremap <leader>} a``<esc>i 
 nmap <leader>/ :nohlsearch<CR>
 nmap <leader>. A:<Esc>
+nmap <leader>: A:<cr>
 nmap <leader>rw :%s/resplasar/por/g
 
 
@@ -236,6 +242,9 @@ nnoremap <c-k> 10<C-y>M
 
 "abrir nueva pestaña para moverse entre ellas 'gt'
 nmap <C-t> :tabnew 
+nmap <C-m> :tabm 
+nnoremap <cr> o<ESC>
 nmap <leader><Right> :vsplit 
 nmap <C-z> u
+inoremap <f1> <ESC>
 nmap <f1> <ESC>
