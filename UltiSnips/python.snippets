@@ -1,9 +1,27 @@
-priority -50
+priority 0
 
 ###########################################################################
 #                            TEXTMATE SNIPPETS                            #
 ###########################################################################
+# plantilla flask
+snippet fdef "plantilla flask funtion" b
+@app.route("/",methods=["GET"])
+def ${1:funtion}():
+    return "<p>Hello, from root</p>"
+endsnippet
+snippet flask "plantilla flask" b
+from flask import Flask, request
 
+app = Flask(__name__)
+
+@app.route("/",methods=["GET"])
+def index():
+    return "<p>Hello, from root</p>"
+
+@app.route("/<int:numero>",methods=["GET"])
+def hello_world(numero):
+    return f"<p>Hello { numero }!</p>"
+endsnippet
 #! header
 snippet #! "#!/usr/bin/env python" b
 #!/usr/bin/env python
@@ -533,8 +551,6 @@ snippet def "function with docstrings" b
 def ${1:function}(`!p
 if snip.indent:
 	snip.rv = 'self' + (", " if len(t[2]) else "")`${2:arg1}):
-	`!p snip.rv = triple_quotes(snip)`${4:TODO: Docstring for $1.}`!p
-write_function_docstring(t, snip) `
 	${5:${VISUAL:pass}}
 endsnippet
 

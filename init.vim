@@ -68,7 +68,7 @@ Plug 'voronkovich/ultisnips-vue' "vue-snippets
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim' "asi al chile no se que hacer carnal
 Plug 'easymotion/vim-easymotion'   "permite navegar facil com convinacion de teclas
-Plug 'mhinz/vim-signify'          " te avisa que se quita o que se agrega
+Plug 'mhinz/vim-signify'          " te avisa que se quita o que se agrega en git
 Plug 'scrooloose/nerdtree'         "te genera un arbol de archivos
 Plug 'christoomey/vim-tmux-navigator'  "te permite navegar entre las ventanas
 Plug 'scrooloose/nerdcommenter'  "genera comentarios 
@@ -77,9 +77,9 @@ Plug 'vim-scripts/pylint.vim' " plug python
 Plug 'vim-python/python-syntax'
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
 Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'dinhhuy258/vim-database', {'branch': 'master', 'do': ':UpdateRemotePlugins'}
-Plug 'cwood/vim-django'
-Plug 'tweekmonster/django-plus.vim'
+" Plug 'dinhhuy258/vim-database', {'branch': 'master', 'do': ':UpdateRemotePlugins'}
+" Plug 'cwood/vim-django'
+" Plug 'tweekmonster/django-plus.vim'
 
 
 
@@ -103,8 +103,8 @@ autocmd VimEnter * highlight jsDot ctermfg=255
 autocmd VimEnter * syntax sync fromstart
 
 "configuracion de python
-let g:python3_host_prog = 'C:\Users\Axel Silva\AppData\Local\Programs\Python\Python311\python.exe' "le decimos donde se encuentra python311
-let g:python3_host_prog = 'C:\Users\Axel Silva\AppData\Local\Programs\Python\Python37\python.exe' "le decimos donde se encuentra python37
+let g:python3_host_prog = 'C:\Users\Axel Silva\AppData\Local\Programs\Python\Python310\python.exe' "le decimos donde se encuentra python311
+" let g:python3_host_prog = 'C:\Users\Axel Silva\AppData\Local\Programs\Python\Python37\python.exe' "le decimos donde se encuentra python37
 let g:python_host_prog = 'C:/python27/python.exe' "ruta de donde se encuentra python27
 let g:UltiSnipsUsePythonVersion = 3  "le decimos que version va a utilizar
 let g:ycm_python_binary_path = 'python3' " esto no se que sea pero esta jalando asi que dejalo asi
@@ -244,7 +244,8 @@ nnoremap <c-k> 10<C-y>M
 nmap <C-t> :tabnew 
 nmap <C-m> :tabm 
 nnoremap <cr> o<ESC>
-nmap <leader><Right> :vsplit 
+nmap <leader><Right> :vs 
+nmap <leader><Up> :sp 
 nmap <C-z> u
 inoremap <f1> <ESC>
 nmap <f1> <ESC>
