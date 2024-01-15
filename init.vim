@@ -77,6 +77,7 @@ Plug 'vim-scripts/pylint.vim' " plug python
 Plug 'vim-python/python-syntax'
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build', 'branch': 'main' }
 Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'AndrewRadev/tagalong.vim'
 " Plug 'dinhhuy258/vim-database', {'branch': 'master', 'do': ':UpdateRemotePlugins'}
 " Plug 'cwood/vim-django'
 " Plug 'tweekmonster/django-plus.vim'
@@ -103,9 +104,8 @@ autocmd VimEnter * highlight jsDot ctermfg=255
 autocmd VimEnter * syntax sync fromstart
 
 "configuracion de python
-let g:python3_host_prog = 'C:\Users\Axel Silva\AppData\Local\Programs\Python\Python310\python.exe' "le decimos donde se encuentra python311
-" let g:python3_host_prog = 'C:\Users\Axel Silva\AppData\Local\Programs\Python\Python37\python.exe' "le decimos donde se encuentra python37
-let g:python_host_prog = 'C:/python27/python.exe' "ruta de donde se encuentra python27
+let g:python3_host_prog = 'C:\Users\david\AppData\Local\Programs\Python\Python310\python.exe' "le decimos donde se encuentra python37
+let g:python_host_prog = 'C:\python27\python.exe' "ruta de donde se encuentra python27
 let g:UltiSnipsUsePythonVersion = 3  "le decimos que version va a utilizar
 let g:ycm_python_binary_path = 'python3' " esto no se que sea pero esta jalando asi que dejalo asi
 
@@ -113,7 +113,7 @@ let g:ycm_python_binary_path = 'python3' " esto no se que sea pero esta jalando 
 let g:indentLine_defaultGroup = 'SpecialKey'
 let g:indentLine_color_term = 117
 let g:indentLine_enabled = 1
-let g:indentLine_char_list = ['¦','|']
+let g:indentLine_char_list = ["▏"] "['¦',,'|']
 
 "tema
 let g:gruvbox_contrast_dark='hard' 
@@ -189,32 +189,36 @@ source $HOME/AppData/Local/nvim/rainbow.vim "configuracion de los parentesis de 
 source $HOME/AppData/Local/nvim/coc2.vim  "configuracion de coc
 "source $HOME/AppData/Local/nvim/funciones.vim "configuracion de funciones 
 
-let g:jedi#environment_path = "C:\Users\Axel Silva\AppData\Local\Programs\Python\Python310"
+let g:jedi#environment_path = "C:\Users\david\AppData\Local\Programs\Python\Python310"
 
 "-------------------------------------configuraciones de teclas-------------------
 
 "Plugs
-nmap <leader>gd <Plug>(coc-definition)
-nmap <leader>gy <Plug>(coc-type-definition)
-nmap <leader>gi <Plug>(coc-implementation)
-nmap <leader>gr <Plug>(coc-references)
-xmap s <Plug>VSurround
-nmap <Leader>s <Plug>(easymotion-s2)
-nmap <Leader>nt :NERDTreeFind<cr>  
-map <Leader>f :Files<CR>
+nnoremap <leader>gd <Plug>(coc-definition)
+nnoremap <leader>gy <Plug>(coc-type-definition)
+nnoremap <leader>gi <Plug>(coc-implementation)
+nnoremap <leader>gr <Plug>(coc-references)
+vnoremap s <Plug>VSurround
+nnoremap <Leader>s <Plug>(easymotion-s2)
+nnoremap <Leader>nt :NERDTreeFind<cr>  
+nnoremap <Leader>f :Files<CR>
 "map <Leader>ag :Ag<CR>
-nmap <leader>pr <Plug>(coc-format)
-nmap <leader>pf <Plug>(coc-format-selected)
-vmap <leader>pf <Plug>(coc-format-selected)
+nnoremap <leader>pr <Plug>(coc-format)
+nnoremap <leader>pf <Plug>(coc-format-selected)
+vnoremap <leader>pf <Plug>(coc-format-selected)
 
 
 
-nmap <Leader>w :w<CR>
-nmap <Leader>W :wq<CR>
-nmap <Leader>Wq :wqa<CR>
-nmap <Leader>q :q<CR>
-nmap <Leader>qq :q!<CR>
+noremap <Leader>w :w<CR>
+nnoremap <Leader>W :wq<CR>
+nnoremap <Leader>Wq :wqa<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>qq :q!<CR>
 inoremap <Esc> <Esc><Esc>
+imap <f1> <ESC>
+nnoremap <f1> <ESC>
+nnoremap <A-UP> :m-2<CR>
+nnoremap <A-DOWN> :m+<CR>
 
 nnoremap <Leader>> 10<C-w>> 	
 nnoremap <Leader>< 10<C-w><
@@ -223,10 +227,11 @@ nnoremap <Leader>; A;<Esc>
 nnoremap <Leader>, A,<cr>
 nnoremap <leader>{ A{}<esc>i 
 nnoremap <leader>} a``<esc>i 
-nmap <leader>/ :nohlsearch<CR>
-nmap <leader>. A:<Esc>
-nmap <leader>: A:<cr>
-nmap <leader>rw :%s/resplasar/por/g
+"nnoremap <leader>/ :nohlsearch<CR>
+nnoremap <leader>/ :let @/ = ""<CR>
+nnoremap <leader>. A:<Esc>
+nnoremap <leader>: A:<cr>
+nnoremap <leader>rw :%s/resplasar/por/g
 
 
 "tmux navegator
@@ -241,11 +246,13 @@ nnoremap <c-j> 10<C-e>M
 nnoremap <c-k> 10<C-y>M
 
 "abrir nueva pestaña para moverse entre ellas 'gt'
-nmap <C-t> :tabnew 
-nmap <C-m> :tabm 
-nnoremap <cr> o<ESC>
-nmap <leader><Right> :vs 
-nmap <leader><Up> :sp 
-nmap <C-z> u
-inoremap <f1> <ESC>
-nmap <f1> <ESC>
+
+
+nnoremap <leader><Right> :vs 
+nnoremap <leader><Up> :sp 
+noremap <C-z> u
+
+nnoremap <leader>t :tabnew<Space>
+nnoremap <leader>m :tabm<Space>
+nnoremap <CR> o<ESC>
+nnoremap <leader>cv :edit $MYVIMRC<cr>
